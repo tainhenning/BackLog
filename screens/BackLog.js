@@ -4,11 +4,11 @@ import * as firebase from 'firebase';
 import BackLogGame from './BackLogGame';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAk6xmNqhwN-BfQd3hSoOgZrv8k35w1M8A",
-    authDomain: "backlog-6bbd9.firebaseapp.com",
-    databaseURL: "https://backlog-6bbd9.firebaseio.com",
-    projectId: "backlog-6bbd9",
-    storageBucket: "backlog-6bbd9.appspot.com"
+    apiKey:
+    authDomain:
+    databaseURL:
+    projectId:
+    storageBucket:
 }
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
