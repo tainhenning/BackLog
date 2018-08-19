@@ -2,16 +2,9 @@ import React, { Component } from 'react';
 import {StatusBar,StyleSheet,FlatList,Text,View} from 'react-native';
 import * as firebase from 'firebase';
 import BackLogGame from './BackLogGame';
+import firebaseConf from './firebaseConf.js';
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAk6xmNqhwN-BfQd3hSoOgZrv8k35w1M8A",
-    authDomain: "backlog-6bbd9.firebaseapp.com",
-    databaseURL: "https://backlog-6bbd9.firebaseio.com",
-    projectId: "backlog-6bbd9",
-    storageBucket: "backlog-6bbd9.appspot.com"
-}
-
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConf);
 
 export default class BackLog extends Component {
     constructor(props) {
@@ -35,7 +28,7 @@ export default class BackLog extends Component {
             snap.forEach((child) => {
                 key++;
                 newItems.push({
-                    id: child.val(),
+                    id: key,
                     title: child.val().title,
                     year: child.val().year,
                     thumbnail: child.val().thumbnail
