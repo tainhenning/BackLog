@@ -4,7 +4,19 @@ import * as firebase from 'firebase';
 import BackLogGame from './BackLogGame';
 import firebaseConf from './firebaseConf.js';
 
+<<<<<<< HEAD
 const firebaseApp = firebase.initializeApp(firebaseConf);
+=======
+const firebaseConfig = {
+    apiKey:
+    authDomain:
+    databaseURL:
+    projectId:
+    storageBucket:
+}
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+>>>>>>> 8ed1f48c012fa4faac0e318590569ca28d13547a
 
 export default class BackLog extends Component {
     constructor(props) {
